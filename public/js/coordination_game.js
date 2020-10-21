@@ -55,6 +55,7 @@ downloadCSV = function (csv, filename) {
 const nImageInst = 2;
 const debugModeCaliDot = 1;
 const realCaliDot = 12;
+var nTrials = eu.length;
 
 // const feedback_duration = 3000;
 const maxTimeChoice = 3000;
@@ -755,7 +756,7 @@ var game_choice = {
             }
         }      
     ],
-    loop_function: () => choice_count < payoff.length, // change this to 90 after uploading
+    loop_function: () => choice_count < nTrials, // change this to 90 after uploading
 };
 
 // break
@@ -885,7 +886,7 @@ var game_belief = {
             }
         }      
     ],
-    loop_function: () => belief_count < payoff.length, // change this to length of array: 105 
+    loop_function: () => belief_count < nTrials, // change this to length of array: 105 
 };
 
 
